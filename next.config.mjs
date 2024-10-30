@@ -4,8 +4,6 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    basePath: '/tenx.github.io',
-    assetPrefix: '/tenx.github.io/',
     distDir: 'docs',
     optimizeFonts: false,
 };
