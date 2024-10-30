@@ -6,6 +6,7 @@ const nextConfig = {
     },
     basePath: '',
     assetPrefix: '',
+    distDir: 'docs',
 };
 
 export default nextConfig;
