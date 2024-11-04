@@ -4,14 +4,11 @@ Welcome to my personal portfolio website! This site showcases my work as an AI/M
 
 ## 🌟 Featured Projects
 
+### Ottobock Design Thinking
+A comprehensive design thinking project focused on improving prosthetic limb user experience through innovative AI and sensor technologies.
+
 ### FlexiGPT
 An enterprise-grade AI assistant platform with advanced RAG capabilities, enabling seamless knowledge management and custom chatbot deployment with real-time data integration.
-
-### Face Recognition System
-AI-powered face recognition system with real-time detection and analysis capabilities.
-
-### Other Projects
-Various projects in AI Image Generation, NLP Research, Robotics Control, and Medical Image Analysis.
 
 ## 🛠 Tech Stack
 

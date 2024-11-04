@@ -48,24 +48,24 @@ export default function Home() {
       <ScrollToTop />
       
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            {/* Logo Section */}
+        <div className="container mx-auto px-4 py-4 md:py-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
+            {/* Logo Section with improved mobile spacing */}
             <Link 
               href="/" 
-              className={`${orbitron.className} text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity`}
+              className={`${orbitron.className} text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity`}
             >
               TENG TENG
             </Link>
 
-            {/* Navigation Section */}
-            <nav className="flex justify-center">
-              <ul className="flex space-x-8">
+            {/* Navigation Section with mobile optimization */}
+            <nav className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+              <ul className="flex space-x-4 md:space-x-8 min-w-max">
                 {TABS.map((tab) => (
                   <li key={tab.toLowerCase()}>
                     <Link
                       href={`#${tab.toLowerCase()}`}
-                      className={`text-sm uppercase tracking-wide transition-all duration-200 relative
+                      className={`text-sm uppercase tracking-wide transition-all duration-200 relative whitespace-nowrap
                         ${activeTab === tab.toLowerCase()
                           ? 'text-blue-600'
                           : 'text-gray-600 hover:text-blue-600'

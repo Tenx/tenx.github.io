@@ -6,6 +6,104 @@ export const NEWS_ITEMS = [
 
 export const PROJECTS = [
   {
+    imageUrl: "/projects/neural-search/thumbnail.jpg",
+    title: "Neural Architecture Search for Energy Forecasting",
+    description: "A sophisticated NAS framework leveraging reinforcement learning to discover optimal attention-based architectures for long-term energy time series forecasting.",
+    techStack: [
+      "PyTorch",
+      "Ray",
+      "TensorFlow",
+      "Python",
+      "CUDA",
+      "MLflow",
+      "Weights & Biases",
+      "Distributed Computing"
+    ],
+    projectUrl: "/project/neural-search",
+    gallery: [
+      "/projects/neural-search/thumbnail.jpg",
+      "/projects/neural-search/architecture.jpg"
+    ]
+  },
+  {
+    imageUrl: "/projects/spatial-robotics/thumbnail.jpg",
+    title: "Spatial-AI in Collaborative Robotics",
+    description: "A human-centered approach to collaborative robotics using Raspberry Pi, depth cameras, and experiential learning to create intuitive and safe human-robot interactions.",
+    techStack: [
+      "RealSense D455",
+      "Raspberry Pi",
+      "Python",
+      "ROS",
+      "TensorFlow",
+      "OpenCV",
+      "PyTorch",
+      "Robot Operating System"
+    ],
+    projectUrl: "/project/spatial-robotics",
+    gallery: [
+      "/projects/spatial-robotics/thumbnail.jpg",
+      "/projects/spatial-robotics/architecture.jpg"
+    ]
+  },
+  {
+    imageUrl: "/projects/eco-restoration/thumbnail.jpg",
+    title: "Eco-Restoration Project - Denmark, WA",
+    description: "A community-driven initiative in Denmark, Western Australia, focusing on environmental restoration and sustainable housing development to achieve local ecosystem balance.",
+    techStack: [
+      "Sustainable Architecture",
+      "Permaculture",
+      "Water Management",
+      "Native Plants",
+      "Solar Systems",
+      "Biodiversity Mapping",
+      "Community Planning"
+    ],
+    projectUrl: "/project/eco-restoration",
+    gallery: [
+      "/projects/eco-restoration/thumbnail.jpg",
+      "/projects/eco-restoration/components.jpg"
+    ]
+  },
+  {
+    imageUrl: "/projects/ducere/thumbnail.jpg",
+    title: "DucereAI - Leadership Analysis Platform",
+    description: "AI-powered platform that analyzes and improves leadership skills through advanced image and voice processing, providing personalized feedback and development paths.",
+    techStack: [
+      "Computer Vision",
+      "Voice Analysis",
+      "Machine Learning",
+      "React",
+      "Python",
+      "TensorFlow",
+      "AWS",
+      "Node.js"
+    ],
+    projectUrl: "/project/ducere",
+    gallery: [
+      "/projects/ducere/thumbnail.jpg",
+      "/projects/ducere/features.jpg"
+    ]
+  },
+  {
+    imageUrl: "/projects/ottobock/thumbnail.jpg",
+    title: "Ottobock Design Thinking",
+    description: "A comprehensive design thinking project focused on improving prosthetic limb user experience through innovative AI and sensor technologies.",
+    techStack: [
+      "AI/ML",
+      "Sensor Tech",
+      "IoT",
+      "Mobile App",
+      "Data Analytics",
+      "User Research",
+      "Prototyping"
+    ],
+    projectUrl: "/project/ottobock",
+    gallery: [
+      "/projects/ottobock/thumbnail.jpg",
+      "/projects/ottobock/process.jpg"
+    ]
+  },
+  {
     imageUrl: "/projects/flexigpt/thumbnail.jpg",
     title: "FlexiGPT - Enterprise AI Assistant Platform",
     description: "Enterprise-grade AI assistant platform with advanced RAG capabilities, enabling seamless knowledge management and custom chatbot deployment with real-time data integration.",
@@ -23,67 +121,6 @@ export const PROJECTS = [
     gallery: [
       "/projects/flexigpt/thumbnail.jpg",
       "/projects/flexigpt/model.jpg"
-    ]
-  },
-  {
-    imageUrl: "/projects/face-recognition/thumbnail.jpg",
-    title: "Face Recognition System",
-    description: "AI-powered face recognition system with real-time detection and analysis capabilities.",
-    techStack: ["Python", "TensorFlow", "OpenCV", "React"],
-    projectUrl: "/project/face-recognition",
-    gallery: [
-      "/projects/face-recognition/demo.jpg",
-      "/projects/face-recognition/architecture.jpg"
-    ]
-  },
-  {
-    imageUrl: "/projects/chatbot/thumbnail.jpg",
-    title: "AI Chatbot Platform",
-    description: "Advanced conversational AI platform with natural language understanding.",
-    techStack: ["Python", "PyTorch", "FastAPI", "Vue.js"],
-    projectUrl: "/project/chatbot",
-    gallery: [
-      "/projects/chatbot/interface.jpg"
-    ]
-  },
-  {
-    imageUrl: "/projects/image-gen/thumbnail.jpg",
-    title: "AI Image Generation",
-    description: "Text-to-image generation system using state-of-the-art diffusion models.",
-    techStack: ["Python", "PyTorch", "Stable Diffusion", "Next.js"],
-    projectUrl: "/project/image-generation",
-    gallery: [
-      "/projects/image-gen/samples.jpg"
-    ]
-  },
-  {
-    imageUrl: "/projects/nlp/thumbnail.jpg",
-    title: "NLP Research Platform",
-    description: "Research platform for natural language processing experiments and model training.",
-    techStack: ["Python", "Transformers", "BERT", "Django"],
-    projectUrl: "/project/nlp-platform",
-    gallery: [
-      "/projects/nlp/architecture.jpg"
-    ]
-  },
-  {
-    imageUrl: "/projects/robotics/thumbnail.jpg",
-    title: "Robotics Control System",
-    description: "Real-time control system for robotic manipulation using reinforcement learning.",
-    techStack: ["Python", "ROS", "PyTorch", "C++"],
-    projectUrl: "/project/robotics",
-    gallery: [
-      "/projects/robotics/demo.jpg"
-    ]
-  },
-  {
-    imageUrl: "/projects/medical/thumbnail.jpg",
-    title: "Medical Image Analysis",
-    description: "Deep learning system for medical image analysis and disease detection.",
-    techStack: ["Python", "TensorFlow", "NumPy", "Flask"],
-    projectUrl: "/project/medical-imaging",
-    gallery: [
-      "/projects/medical/results.jpg"
     ]
   }
 ]
