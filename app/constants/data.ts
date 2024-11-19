@@ -1,7 +1,7 @@
 export const NEWS_ITEMS = [
-  'New paper accepted to ICLR 2024!',
-  'Excited to join Stanford as an Assistant Professor in Fall 2024!',
-  'New paper accepted to NeurIPS 2023!'
+  '<a href="https://www.humboldt-foundation.de/en/explore/organisation/humboldt-communication-lab/comlab4-smart-new-worlds-how-ai-robotics-and-digitalisation-transform-our-lives" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">🏆 First Prize Winner at Humboldt Foundation\'s ComLab#4 on AI & Robotics Innovation</a>',
+  '<a href="https://www.som.lmu.de/isto/en/institute/associated-academics/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">🎓 Research Associate at LMU Munich - AI Applications in HR Management</a>',
+  '<a href="https://www.youtube.com/watch?v=9eaPGP4iFhY" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">🎯 Presented AI-Driven Student Motivation Analysis at MIT Innovation Summit</a>'
 ]
 
 export const PROJECTS = [
@@ -142,9 +142,8 @@ export const EXPERIENCES = [
 ]
 
 export const SOCIAL_LINKS = {
-  email: "pliang@cs.cmu.edu",
-  github: "https://github.com/yourusername",
-  twitter: "https://twitter.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
+  email: "teng.teng@sap.com",
+  github: "https://github.com/tenx",
+  linkedin: "https://www.linkedin.com/in/teng2/",
   scholar: "https://scholar.google.com/citations?user=yourid"
 }

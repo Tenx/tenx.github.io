@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Teng Teng - AI/ML Developer",
-  description: "Personal portfolio of Teng Teng, AI/ML Developer Lead and Co-founder of XXXAI",
+  title: "Teng Teng - Lead of AI/ML Development & Research",
+  description: "Personal portfolio of Teng Teng, Lead of AI/ML Development & Research at SAP",
   icons: {
     icon: '/favicon.ico',
   },
