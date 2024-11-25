@@ -5,111 +5,100 @@ export default function SpatialRoboticsProject() {
   return (
     <ProjectLayout
       title="Spatial-AI in Collaborative Robotics"
-      description="A human-centered approach to collaborative robotics using Raspberry Pi, depth cameras, and experiential learning to create intuitive and safe human-robot interactions."
-      challenge={`
-        Traditional industrial robots operate in isolation due to safety concerns and limited spatial awareness. The challenge was to develop a collaborative robotic system that could:
-        • Safely share workspace with humans
-        • Understand and respond to human gestures and movements
-        • Navigate complex, dynamic environments
-        • Provide intuitive interaction methods
-        • Maintain consistent performance in varying conditions
-      `}
-      solution={`
-        We developed a comprehensive spatial awareness system integrating multiple technologies:
-
-        Using the Intel RealSense D455 depth camera and Raspberry Pi, we created a robust spatial recognition system that enables real-time 3D mapping and human detection. The system combines computer vision, depth sensing, and machine learning to create an intelligent collaborative environment.
-
-        The solution incorporates gesture recognition, voice commands, and proximity sensing, allowing for natural human-robot interaction while maintaining strict safety protocols through constant spatial monitoring.
-      `}
-      impact={`
-        The implementation has shown significant improvements in human-robot collaboration:
-        • 85% reduction in safety-related incidents
-        • 40% increase in collaborative task efficiency
-        • 90% user satisfaction rate in human-robot interaction
-        • 60% reduction in robot programming time
-        • Successfully deployed in 15+ industrial settings
-        • Recognized by industry leaders for innovative approach to safety
-      `}
+      description="Integration of RealSense D455 depth camera with myCobot robotic arm for spatial awareness and object manipulation using ROS."
+      challenge="Integrating spatial awareness into robotic systems presents significant challenges in coordinate transformation, real-time processing, and precise control. Traditional robotic systems often lack the ability to accurately perceive and interact with their environment, making human-robot collaboration difficult and potentially unsafe. The challenge was to develop a system that could seamlessly integrate depth sensing with robotic control."
+      solution="As the technical lead, I developed a comprehensive ROS-based system that integrates Intel RealSense D455 depth camera with myCobot robotic arm. The solution includes custom calibration methods for coordinate transformation, real-time point cloud processing for object detection, and precise control algorithms for robotic manipulation. The system uses ROS nodes for communication between the depth camera and robot controller."
+      impact="The implementation has enabled precise object tracking and manipulation capabilities. The system successfully demonstrates real-time spatial awareness, allowing the robot to accurately locate and interact with objects in its environment. The integration provides a foundation for advanced human-robot collaboration applications."
       techStack={[
-        "RealSense D455",
-        "Raspberry Pi",
-        "Python",
         "ROS",
-        "TensorFlow",
+        "Python",
+        "C++",
+        "RealSense SDK",
+        "Point Cloud Library",
         "OpenCV",
-        "PyTorch",
-        "Robot Operating System"
+        "TF (Transform)",
+        "myCobot API"
       ]}
-      imageUrl="/projects/spatial-robotics/thumbnail.jpg"
-      demoUrl="https://spatial-robotics.vercel.app/"
-      githubUrl="https://github.com/Tenx/spatial-robotics"
+      imageUrl="/projects/spatial-robotics/thumbnail.png"
     >
-      <section className="space-y-6">
-        <h2 className="text-xl font-semibold">System Architecture</h2>
-        <div className="relative h-[400px] w-full rounded-lg overflow-hidden mb-6">
-          <Image
-            src="/projects/spatial-robotics/architecture.jpg"
-            alt="Spatial-AI System Architecture"
-            fill
-            className="object-contain"
-          />
-        </div>
-        <p className="text-gray-600">
-          Our system integrates multiple sensing modalities through a sophisticated 
-          architecture. The RealSense D455 provides depth information, while additional 
-          sensors monitor proximity and environmental conditions. Data is processed through 
-          our custom AI pipeline for real-time decision making and safety monitoring.
-        </p>
+      <section className="space-y-8">
+        {/* Technical Implementation */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">System Architecture</h2>
+          <div className="space-y-6">
+            <div className="relative h-[600px] w-full rounded-lg overflow-hidden">
+              <Image
+                src="/projects/spatial-robotics/architecture.png"
+                alt="System Architecture"
+                fill
+                className="object-contain"
+              />
+            </div>
+            
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-medium text-lg mb-3">Hardware Integration</h3>
+                <p className="text-gray-600">
+                  The system integrates a myCobot 280 M5Stack robotic arm with an Intel RealSense D455 
+                  depth camera. The D455 provides high-quality depth sensing and RGB imaging, while the 
+                  6-DOF robotic arm enables precise manipulation. The hardware is coordinated through 
+                  ROS nodes running on Ubuntu 20.04.
+                </p>
+                <div className="relative h-[400px] w-full rounded-lg overflow-hidden mt-4">
+                  <Image
+                    src="/projects/spatial-robotics/mycobot.png"
+                    alt="myCobot Hardware Setup"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
 
-        <h2 className="text-xl font-semibold mt-8">Key Components</h2>
-        <div className="space-y-4 text-gray-600">
-          <div>
-            <h3 className="font-medium">Spatial Recognition System</h3>
-            <p>Advanced depth sensing and 3D mapping capabilities enable precise 
-            understanding of the workspace, including human presence and movement tracking.</p>
-          </div>
-          
-          <div>
-            <h3 className="font-medium">Human-Centered Interface</h3>
-            <p>Intuitive gesture recognition and voice command system allows natural 
-            interaction while maintaining safety through constant spatial monitoring.</p>
-          </div>
-          
-          <div>
-            <h3 className="font-medium">Real-time Safety Monitoring</h3>
-            <p>Continuous environment analysis ensures safe operation through dynamic 
-            safety zones and adaptive speed control based on human proximity.</p>
-          </div>
-          
-          <div>
-            <h3 className="font-medium">Experiential Learning System</h3>
-            <p>AI models trained on real-world interaction data continuously improve 
-            the system's understanding of human behavior and movement patterns.</p>
+              <div>
+                <h3 className="font-medium text-lg mb-3">Spatial Calibration</h3>
+                <p className="text-gray-600">
+                  Developed a custom calibration system using marker-based detection to establish the 
+                  coordinate transformation between the camera and robot base frames. The calibration 
+                  process uses three reference points to compute the translation and rotation matrices, 
+                  enabling accurate coordinate mapping between vision and robot control systems.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-medium text-lg mb-3">Point Cloud Processing</h3>
+                <p className="text-gray-600">
+                  Implemented real-time point cloud processing pipelines for object detection and 
+                  tracking. The system uses color-based segmentation and clustering algorithms to 
+                  identify target objects, with custom ROS nodes handling the point cloud data 
+                  processing and coordinate transformation for robot control.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <h2 className="text-xl font-semibold mt-8">Implementation Details</h2>
-        <div className="space-y-2 text-gray-600">
-          <p>The system is built on proven technologies and methodologies:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>RealSense D455 for accurate depth sensing and spatial mapping</li>
-            <li>Raspberry Pi 4 for edge computing and sensor integration</li>
-            <li>Custom ROS nodes for robot control and safety monitoring</li>
-            <li>TensorFlow and PyTorch for gesture recognition and movement prediction</li>
-            <li>Real-time point cloud processing for environment understanding</li>
-          </ul>
-        </div>
-
-        <h2 className="text-xl font-semibold mt-8">Future Development</h2>
-        <div className="bg-blue-50 p-6 rounded-lg">
-          <p className="text-gray-800 font-medium">Ongoing Improvements</p>
-          <ul className="list-disc list-inside space-y-2 text-gray-600 mt-2">
-            <li>Enhanced gesture recognition through deep learning</li>
-            <li>Integration with additional sensor types</li>
-            <li>Expanded voice command capabilities</li>
-            <li>Advanced predictive movement algorithms</li>
-            <li>Multi-robot collaboration features</li>
-          </ul>
+        {/* Technical Details */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Implementation Details</h2>
+          <div className="space-y-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-medium text-lg mb-2">ROS Framework</h3>
+              <p className="text-gray-600">
+                The system utilizes ROS Noetic for communication between components. Custom nodes 
+                handle point cloud processing, coordinate transformation broadcasting, and robot 
+                control. The architecture includes nodes for color detection, position calculation, 
+                and robot movement coordination.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-medium text-lg mb-2">Control System</h3>
+              <p className="text-gray-600">
+                Developed a hybrid control system combining ROS MoveIt for path planning and direct 
+                control through the myCobot Python API. The system includes safety checks and 
+                real-time position monitoring to ensure reliable operation.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </ProjectLayout>

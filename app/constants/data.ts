@@ -11,11 +11,11 @@ export const PROJECTS = [
     description: "A sophisticated NAS framework leveraging reinforcement learning to discover optimal attention-based architectures for long-term energy time series forecasting.",
     techStack: [
       "PyTorch",
-      "Ray",
       "TensorFlow",
       "Python",
-      "CUDA",
+      "Ray",
       "MLflow",
+      "CUDA",
       "Weights & Biases",
       "Distributed Computing"
     ],
@@ -26,23 +26,23 @@ export const PROJECTS = [
     ]
   },
   {
-    imageUrl: "/projects/spatial-robotics/thumbnail.jpg",
+    imageUrl: "/projects/spatial-robotics/thumbnail.png",
     title: "Spatial-AI in Collaborative Robotics",
-    description: "A human-centered approach to collaborative robotics using Raspberry Pi, depth cameras, and experiential learning to create intuitive and safe human-robot interactions.",
+    description: "Integration of RealSense D455 depth camera with myCobot robotic arm for spatial awareness and object manipulation using ROS.",
     techStack: [
-      "RealSense D455",
-      "Raspberry Pi",
-      "Python",
       "ROS",
-      "TensorFlow",
+      "Python",
+      "C++",
       "OpenCV",
-      "PyTorch",
-      "Robot Operating System"
+      "Point Cloud Library",
+      "RealSense SDK",
+      "TF (Transform)",
+      "myCobot API"
     ],
     projectUrl: "/project/spatial-robotics",
     gallery: [
-      "/projects/spatial-robotics/thumbnail.jpg",
-      "/projects/spatial-robotics/architecture.jpg"
+      "/projects/spatial-robotics/thumbnail.png",
+      "/projects/spatial-robotics/architecture.png"
     ]
   },
   {
@@ -51,37 +51,40 @@ export const PROJECTS = [
     description: "A community-driven initiative in Denmark, Western Australia, focusing on environmental restoration and sustainable housing development to achieve local ecosystem balance.",
     techStack: [
       "Sustainable Architecture",
-      "Permaculture",
+      "Permaculture Design",
       "Water Management",
-      "Native Plants",
       "Solar Systems",
+      "Native Plants",
       "Biodiversity Mapping",
       "Community Planning"
     ],
     projectUrl: "/project/eco-restoration",
     gallery: [
       "/projects/eco-restoration/thumbnail.jpg",
-      "/projects/eco-restoration/components.jpg"
+      "/projects/eco-restoration/solution.jpg",
+      "/projects/eco-restoration/native-plant.jpg",
+      "/projects/eco-restoration/sustainable-practice.jpg"
     ]
   },
   {
-    imageUrl: "/projects/ducere/thumbnail.jpg",
+    imageUrl: "/projects/ducere/thumbnail.png",
     title: "DucereAI - Leadership Analysis Platform",
     description: "AI-powered platform that analyzes and improves leadership skills through advanced image and voice processing, providing personalized feedback and development paths.",
     techStack: [
       "Computer Vision",
       "Voice Analysis",
       "Machine Learning",
-      "React",
       "Python",
       "TensorFlow",
       "AWS",
+      "React",
       "Node.js"
     ],
     projectUrl: "/project/ducere",
     gallery: [
-      "/projects/ducere/thumbnail.jpg",
-      "/projects/ducere/features.jpg"
+      "/projects/ducere/thumbnail.png",
+      "/projects/ducere/architecture.png",
+      "/projects/ducere/prize.jpg"
     ]
   },
   {
@@ -89,18 +92,20 @@ export const PROJECTS = [
     title: "Ottobock Design Thinking",
     description: "A comprehensive design thinking project focused on improving prosthetic limb user experience through innovative AI and sensor technologies.",
     techStack: [
-      "AI/ML",
+      "Machine Learning",
       "Sensor Tech",
       "IoT",
-      "Mobile App",
       "Data Analytics",
+      "Mobile App",
       "User Research",
       "Prototyping"
     ],
     projectUrl: "/project/ottobock",
     gallery: [
       "/projects/ottobock/thumbnail.jpg",
-      "/projects/ottobock/process.jpg"
+      "/projects/ottobock/design-process.png",
+      "/projects/ottobock/co-working.jpg",
+      "/projects/ottobock/result.jpg"
     ]
   },
   {
@@ -108,9 +113,9 @@ export const PROJECTS = [
     title: "FlexiGPT - Enterprise AI Assistant Platform",
     description: "Enterprise-grade AI assistant platform with advanced RAG capabilities, enabling seamless knowledge management and custom chatbot deployment with real-time data integration.",
     techStack: [
+      "Next.js",
       "React",
       "TypeScript",
-      "Next.js",
       "TailwindCSS",
       "GPT-4",
       "RAG",

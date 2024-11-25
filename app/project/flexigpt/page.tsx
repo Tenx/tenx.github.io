@@ -1,24 +1,29 @@
+'use client'
+
 import ProjectLayout from '../../components/ProjectLayout'
 import Image from 'next/image'
+import { useState, useCallback } from 'react'
 
 export default function FlexiGPTProject() {
+  const [showArchitectureModal, setShowArchitectureModal] = useState(false)
+
+  const handleModalClose = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation()
+    setShowArchitectureModal(false)
+  }, [])
+
+  const handleImageClick = useCallback((e: React.MouseEvent) => {
+    e.preventDefault()
+    setShowArchitectureModal(true)
+  }, [])
+
   return (
     <ProjectLayout
       title="FlexiGPT - Enterprise AI Assistant Platform"
-      description="A powerful enterprise-grade AI assistant platform that enables seamless creation and deployment of custom chatbots. Built with advanced RAG capabilities, it features multi-source data integration, real-time updates, and enterprise-ready security."
-      challenge={`
-        In today's fast-paced enterprise environment, organizations struggle with managing vast amounts of institutional knowledge. Teams spend countless hours searching through fragmented information across departments, leading to decreased productivity and inconsistent customer service. Traditional knowledge management systems fail to adapt to growing data volumes, while maintaining security and accuracy becomes increasingly complex.
-      `}
-      solution={`
-        FlexiGPT revolutionizes enterprise knowledge management through a sophisticated AI-powered approach. At its core, it utilizes GPT-4, enhanced by our custom-built Retrieval Augmented Generation (RAG) pipeline. This system processes and indexes enterprise data from multiple sources, creating a unified knowledge base that's both comprehensive and instantly accessible.
-
-        Our platform employs advanced vector search technology through Pinecone, enabling precise information retrieval across millions of documents in milliseconds. The system maintains real-time synchronization with source materials, ensuring information is always current. Enterprise-grade security is built into every layer, with role-based access control and end-to-end encryption protecting sensitive data.
-      `}
-      impact={`
-        The implementation of FlexiGPT has transformed operations across numerous enterprise organizations. Customer service teams now resolve queries 70% faster, with first-response accuracy improving by 85%. New employee onboarding time has been cut in half, as team members can instantly access relevant information and best practices.
-
-        Beyond metrics, FlexiGPT has fundamentally changed how organizations operate. Teams collaborate more effectively, breaking down traditional information silos. The platform's success is reflected in its 90% user satisfaction rate and growing adoption across 50+ enterprise teams.
-      `}
+      description="An enterprise-grade RAG-powered AI assistant platform that revolutionizes how organizations manage and utilize their institutional knowledge."
+      challenge="Enterprise organizations face critical challenges in knowledge management. Information fragmentation across departments significantly reduces productivity, while traditional search systems struggle to capture context and relationships between data points. Knowledge bases often become outdated and inconsistent, creating confusion and inefficiencies. Additionally, security and compliance requirements add layers of complexity, making it difficult to scale knowledge access across large organizations effectively."
+      solution="As the AI/ML Architect, I led the development of FlexiGPT from concept to deployment. My role encompassed designing and implementing the core RAG architecture and ML pipeline, developing custom embedding strategies for enterprise data, and creating a scalable vector search infrastructure. I implemented enterprise-grade security measures and led a team of 5 engineers in system implementation, ensuring robust and secure deployment across multiple enterprise environments."
+      impact="FlexiGPT has demonstrated significant impact across enterprise deployments. We achieved a 70% increase in query resolution speed for customer service teams, while improving first-response accuracy by 85%. The platform reduced onboarding time by 50% and maintained a 90% user satisfaction rate. Our success is further evidenced by successful deployments across 50+ enterprise teams and recognition in leading enterprise AI publications."
       techStack={[
         "React",
         "TypeScript",
@@ -33,60 +38,118 @@ export default function FlexiGPTProject() {
       demoUrl="https://flexi-gpt.vercel.app/"
       githubUrl="https://github.com/Tenx/FlexiGPT"
     >
-      <section className="space-y-6">
-        <h2 className="text-xl font-semibold">Basic Methodology</h2>
-        <div className="relative h-[400px] w-full rounded-lg overflow-hidden mb-6">
-          <Image
-            src="/projects/flexigpt/model.jpg"
-            alt="FlexiGPT Basic Methodology"
-            fill
-            className="object-contain"
-          />
-        </div>
-        <p className="text-gray-600">
-          FlexiGPT employs a sophisticated approach to knowledge processing and retrieval. 
-          When users interact with the system, their queries trigger a multi-step process: 
-          First, the relevant information is retrieved from the knowledge base using semantic search. 
-          Then, GPT-4 processes this context along with the query to generate accurate, contextual responses. 
-          This methodology ensures both high accuracy and maintainable, traceable outputs.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8">Key Features</h2>
-        <div className="space-y-4 text-gray-600">
-          <div>
-            <h3 className="font-medium">Context-Aware Processing</h3>
-            <p>Our advanced RAG pipeline intelligently processes and indexes enterprise data, 
-            creating a dynamic knowledge base that adapts to your organization's evolving needs.</p>
-          </div>
-          
-          <div>
-            <h3 className="font-medium">Seamless Integration</h3>
-            <p>Connect with your existing tools and databases through our flexible API. 
-            Automatic synchronization ensures your knowledge base stays current with your latest information.</p>
-          </div>
-          
-          <div>
-            <h3 className="font-medium">Enterprise Security</h3>
-            <p>Built with security at its core, featuring role-based access control, 
-            audit logging, and end-to-end encryption to protect your sensitive data.</p>
-          </div>
-          
-          <div>
-            <h3 className="font-medium">Performance Insights</h3>
-            <p>Comprehensive analytics dashboard helps you track usage patterns, 
-            response accuracy, and user satisfaction to continuously improve your knowledge base.</p>
+      <section className="space-y-8">
+        {/* Objective & Need Statement */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Project Objective</h2>
+          <div className="bg-blue-50 p-6 rounded-lg">
+            <p className="text-gray-800 mb-4">
+              To create an enterprise-ready AI assistant platform that transforms organizational 
+              knowledge management through advanced RAG technology, making information instantly 
+              accessible while maintaining security and accuracy.
+            </p>
+            <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
+              <Image
+                src="/projects/flexigpt/problem-statement.jpg"
+                alt="Enterprise Knowledge Management Challenges"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
 
-        <h2 className="text-xl font-semibold mt-8">Technical Foundation</h2>
-        <div className="space-y-2 text-gray-600">
-          <p>Built on proven technologies for reliability and performance:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Advanced Vector Search: Pinecone powers our semantic search capabilities</li>
-            <li>Language Processing: GPT-4 with custom-tuned prompts</li>
-            <li>Data Pipeline: LangChain orchestrates our document processing</li>
-            <li>Security Layer: Enterprise-grade encryption and access controls</li>
-          </ul>
+        {/* Role & Responsibilities */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">My Role: AI/ML Architect</h2>
+          <div className="space-y-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-medium text-lg mb-2">Technical Leadership</h3>
+              <p className="text-gray-600">
+                My responsibilities as the AI/ML Architect included architecture design and implementation, ML pipeline development, team technical guidance, and performance optimization.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-medium text-lg mb-2">Research & Innovation</h3>
+              <p className="text-gray-600">
+                I conducted RAG methodology research, developed custom embedding strategies, designed security frameworks, and explored scalability solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Technical Details */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Technical Architecture</h2>
+          <div className="space-y-6">
+            <div className="relative h-[600px] w-full rounded-lg overflow-hidden">
+              <Image
+                src="/projects/flexigpt/technical-architecture.png"
+                alt="FlexiGPT Technical Architecture"
+                fill
+                className="object-contain"
+              />
+            </div>
+            
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-medium text-lg mb-3">Core RAG Implementation</h3>
+                <p className="text-gray-600">
+                  The heart of FlexiGPT is our advanced Retrieval Augmented Generation pipeline. 
+                  We developed a sophisticated multi-stage document processing system that begins 
+                  with semantic chunking of enterprise documents. These chunks are then processed 
+                  through our hybrid embedding system, which combines multiple embedding models 
+                  to capture both semantic meaning and domain-specific context. The system 
+                  maintains context awareness through our proprietary sliding window approach, 
+                  ensuring that retrieved information maintains coherence across broader contexts.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-medium text-lg mb-3">Vector Search Infrastructure</h3>
+                <p className="text-gray-600">
+                  Our distributed vector storage system handles millions of embeddings while 
+                  maintaining sub-second query performance. The architecture employs a hierarchical 
+                  indexing strategy, with frequently accessed information cached in a fast-access 
+                  layer. Real-time updates are managed through an event-driven pipeline that 
+                  ensures index consistency while allowing continuous system operation.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-medium text-lg mb-3">Enterprise Security Layer</h3>
+                <p className="text-gray-600">
+                  Security is implemented at every level of the architecture. Document access 
+                  is controlled through a fine-grained permissions system integrated with 
+                  enterprise authentication services. All data is encrypted both at rest and 
+                  in transit, with a key rotation system ensuring long-term security. The 
+                  system maintains detailed audit logs of all queries and document access.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Outcomes & Metrics */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Performance Metrics</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-medium text-lg mb-2">Response Accuracy</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-2">85%</div>
+              <p className="text-gray-600">Improvement in first-response accuracy</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-medium text-lg mb-2">Query Resolution</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-2">70%</div>
+              <p className="text-gray-600">Faster query resolution time</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-medium text-lg mb-2">User Satisfaction</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-2">90%</div>
+              <p className="text-gray-600">Overall user satisfaction rate</p>
+            </div>
+          </div>
         </div>
       </section>
     </ProjectLayout>

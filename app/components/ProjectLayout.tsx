@@ -4,12 +4,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import ScrollToTop from './ScrollToTop'
+import { useRouter } from 'next/navigation'
 
 interface ProjectLayoutProps {
   title: string
   description: string
   challenge: string
   solution: string
+  solutionImage?: React.ReactElement
   impact: string
   techStack: string[]
   imageUrl: string
@@ -23,6 +25,7 @@ export default function ProjectLayout({
   description,
   challenge,
   solution,
+  solutionImage,
   impact,
   techStack,
   imageUrl,
@@ -30,6 +33,8 @@ export default function ProjectLayout({
   githubUrl,
   children
 }: ProjectLayoutProps) {
+  const router = useRouter()
+
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
@@ -65,7 +70,7 @@ export default function ProjectLayout({
                   src={imageUrl}
                   alt={title}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
                   priority
                 />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
@@ -81,66 +86,68 @@ export default function ProjectLayout({
                   src={imageUrl}
                   alt={title}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
               </div>
             )}
-            <div className="p-8">
-              <h1 className="text-3xl font-bold mb-4">{title}</h1>
-              <p className="text-gray-600 mb-8">{description}</p>
-              
-              <div className="flex flex-wrap gap-2 mb-8">
-                {techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                  >
-                    {tech}
-                  </span>
-                ))}
+            <div className="p-8 space-y-8">
+              <div>
+                <h1 className="text-3xl font-bold mb-4">{title}</h1>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {techStack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <p className="text-gray-600">{description}</p>
               </div>
 
-              <div className="space-y-8">
-                <section>
-                  <h2 className="text-xl font-semibold mb-3">The Challenge</h2>
-                  <p className="text-gray-600">{challenge}</p>
-                </section>
+              <div>
+                <h2 className="text-xl font-semibold mb-2">Challenge</h2>
+                <p className="text-gray-600 whitespace-pre-line">{challenge}</p>
+              </div>
 
-                <section>
-                  <h2 className="text-xl font-semibold mb-3">The Solution</h2>
-                  <p className="text-gray-600">{solution}</p>
-                </section>
-
-                <section>
-                  <h2 className="text-xl font-semibold mb-3">Impact</h2>
-                  <p className="text-gray-600">{impact}</p>
-                </section>
-
-                {children}
-
-                <div className="flex gap-4 mt-8">
-                  {demoUrl && (
-                    <a
-                      href={demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      Live Demo
-                    </a>
-                  )}
-                  {githubUrl && (
-                    <a
-                      href={githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors"
-                    >
-                      View Code
-                    </a>
-                  )}
+              <div>
+                <h2 className="text-xl font-semibold mb-2">Solution</h2>
+                <p className="text-gray-600 whitespace-pre-line">{solution}</p>
+                <div className="my-8">
+                  {solutionImage}
                 </div>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold mb-2">Impact</h2>
+                <p className="text-gray-600 whitespace-pre-line">{impact}</p>
+              </div>
+
+              {children}
+
+              <div className="flex gap-4 mt-8">
+                {demoUrl && (
+                  <a
+                    href={demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Live Demo
+                  </a>
+                )}
+                {githubUrl && title !== "Eco-Restoration Project - Denmark, WA" && (
+                  <a
+                    href={githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors"
+                  >
+                    View Code
+                  </a>
+                )}
               </div>
             </div>
           </div>

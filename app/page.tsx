@@ -58,9 +58,9 @@ export default function Home() {
               TENG TENG
             </Link>
 
-            {/* Navigation Section with mobile optimization */}
-            <nav className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
-              <ul className="flex space-x-4 md:space-x-8 min-w-max">
+            {/* Navigation Section - Removed overflow classes for desktop */}
+            <nav className="md:mx-0 md:px-0">
+              <ul className="flex space-x-4 md:space-x-8">
                 {TABS.map((tab) => (
                   <li key={tab.toLowerCase()}>
                     <Link
