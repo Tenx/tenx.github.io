@@ -22,7 +22,8 @@ export const PROJECTS = [
     projectUrl: "/project/neural-search",
     gallery: [
       "/projects/neural-search/thumbnail.jpg",
-      "/projects/neural-search/architecture.jpg"
+      "/projects/neural-search/research-overview.jpg",
+      "/projects/neural-search/methodology-details.jpg"
     ]
   },
   {
@@ -42,28 +43,28 @@ export const PROJECTS = [
     projectUrl: "/project/spatial-robotics",
     gallery: [
       "/projects/spatial-robotics/thumbnail.png",
-      "/projects/spatial-robotics/architecture.png"
+      "/projects/spatial-robotics/architecture.png",
+      "/projects/spatial-robotics/mycobot.png"
     ]
   },
   {
-    imageUrl: "/projects/eco-restoration/thumbnail.jpg",
-    title: "Eco-Restoration Project - Denmark, WA",
-    description: "A community-driven initiative in Denmark, Western Australia, focusing on environmental restoration and sustainable housing development to achieve local ecosystem balance.",
+    imageUrl: "/projects/ottobock/thumbnail.jpg",
+    title: "Ottobock Design Thinking",
+    description: "A comprehensive design thinking project focused on improving prosthetic limb user experience through innovative AI and sensor technologies.",
     techStack: [
-      "Sustainable Architecture",
-      "Permaculture Design",
-      "Water Management",
-      "Solar Systems",
-      "Native Plants",
-      "Biodiversity Mapping",
-      "Community Planning"
+      "Machine Learning",
+      "Sensor Tech",
+      "IoT",
+      "Data Analytics",
+      "Mobile App",
+      "User Research",
+      "Prototyping"
     ],
-    projectUrl: "/project/eco-restoration",
+    projectUrl: "/project/ottobock",
     gallery: [
-      "/projects/eco-restoration/thumbnail.jpg",
-      "/projects/eco-restoration/solution.jpg",
-      "/projects/eco-restoration/native-plant.jpg",
-      "/projects/eco-restoration/sustainable-practice.jpg"
+      "/projects/ottobock/thumbnail.jpg",
+      "/projects/ottobock/design-process.png",
+      "/projects/ottobock/co-working.jpg"
     ]
   },
   {
@@ -88,27 +89,6 @@ export const PROJECTS = [
     ]
   },
   {
-    imageUrl: "/projects/ottobock/thumbnail.jpg",
-    title: "Ottobock Design Thinking",
-    description: "A comprehensive design thinking project focused on improving prosthetic limb user experience through innovative AI and sensor technologies.",
-    techStack: [
-      "Machine Learning",
-      "Sensor Tech",
-      "IoT",
-      "Data Analytics",
-      "Mobile App",
-      "User Research",
-      "Prototyping"
-    ],
-    projectUrl: "/project/ottobock",
-    gallery: [
-      "/projects/ottobock/thumbnail.jpg",
-      "/projects/ottobock/design-process.png",
-      "/projects/ottobock/co-working.jpg",
-      "/projects/ottobock/result.jpg"
-    ]
-  },
-  {
     imageUrl: "/projects/flexigpt/thumbnail.jpg",
     title: "FlexiGPT - Enterprise AI Assistant Platform",
     description: "Enterprise-grade AI assistant platform with advanced RAG capabilities, enabling seamless knowledge management and custom chatbot deployment with real-time data integration.",
@@ -125,7 +105,29 @@ export const PROJECTS = [
     projectUrl: "/project/flexigpt",
     gallery: [
       "/projects/flexigpt/thumbnail.jpg",
-      "/projects/flexigpt/model.jpg"
+      "/projects/flexigpt/technical-architecture.png",
+      "/projects/flexigpt/performance-metrics.png"
+    ]
+  },
+  {
+    imageUrl: "/projects/eco-restoration/thumbnail.jpg",
+    title: "Eco-Restoration Project - Denmark, WA",
+    description: "A community-driven initiative in Denmark, Western Australia, focusing on environmental restoration and sustainable housing development to achieve local ecosystem balance.",
+    techStack: [
+      "Sustainable Architecture",
+      "Permaculture Design",
+      "Water Management",
+      "Solar Systems",
+      "Native Plants",
+      "Biodiversity Mapping",
+      "Community Planning"
+    ],
+    projectUrl: "/project/eco-restoration",
+    gallery: [
+      "/projects/eco-restoration/thumbnail.jpg",
+      "/projects/eco-restoration/solution.jpg",
+      "/projects/eco-restoration/native-plant.jpg",
+      "/projects/eco-restoration/sustainable-practice.jpg"
     ]
   }
 ]
