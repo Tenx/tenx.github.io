@@ -146,27 +146,42 @@ export default function Home() {
               <h1 className="text-4xl font-bold mb-4">Teng Teng</h1>
               <div className="text-xl text-gray-600 mb-6">
                 <p>Lead of AI/ML Development & Research, SAP</p>
-                <div className="flex items-center mt-2 space-x-4">
-                  <motion.a
-                    href={SOCIAL_LINKS.scholar}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-blue-600"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                      {/* Add Google Scholar icon path */}
-                    </svg>
-                  </motion.a>
-                  {/* Add other social icons */}
-                </div>
               </div>
-              <p className="text-gray-700 mb-8 leading-relaxed">
-                I am a Lead of AI/ML Development & Research at SAP, focusing on developing robust and 
-                interpretable machine learning models for real-world enterprise applications. 
-                My work spans across natural language processing, computer vision, and 
-                multimodal AI systems.
-              </p>
+              <div>
+                <p className="text-gray-700 mb-8 leading-relaxed">
+                  I am a Lead of AI/ML Development & Research at SAP, focusing on developing robust and 
+                  interpretable machine learning models for real-world enterprise applications. 
+                  My work spans across <strong>natural language processing</strong>, <strong>computer vision</strong>, and{' '}
+                  <strong>multimodal AI systems</strong>.
+                </p>
+
+                <p className="text-gray-700 mb-8 leading-relaxed">
+                  I completed my master's thesis on a smart recommendation system, applied to the {' '}
+                  <a href="https://quantinar.com/" target="_blank" rel="noopener noreferrer" 
+                    className="text-blue-600 hover:text-blue-800">
+                    Quantinar
+                  </a> knowledge-sharing platform and {' '}
+                  <a href="https://www.sap.com/products/artificial-intelligence.html" target="_blank" 
+                    rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                    SAP AI Use Case Mapping
+                  </a>, advised by {' '}
+                  <a href="https://de.wikipedia.org/wiki/Wolfgang_H%C3%A4rdle" target="_blank" rel="noopener noreferrer" 
+                    className="text-blue-600 hover:text-blue-800">
+                    Prof. Dr. Wolfgang Härdle
+                  </a> and {' '}
+                  <a href="https://www.wiwi.hu-berlin.de/de/professuren/bwl/wi/personen/hl" target="_blank" 
+                    rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                    Prof. Dr. Stefan Lessmann
+                  </a>. My research focuses on building AI systems that merge information from multiple modalities 
+                  to solve complex, interdisciplinary challenges, blending AI, robotics, and human-computer interaction.
+                </p>
+
+                <p className="text-gray-700 mb-8 leading-relaxed italic">
+                  Fun Fact: In high school, I broke my legs climbing the school fence because I urgently needed 
+                  to meet my first client for my Web 1.0 startup. Thankfully, I paid the medical bill with the 
+                  first sale — guess that's what they call "bootstrapping" in the real world!
+                </p>
+              </div>
               <div className="space-y-2">
                 <p className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-gray-500" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">

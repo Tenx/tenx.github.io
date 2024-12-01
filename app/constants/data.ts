@@ -134,16 +134,68 @@ export const PROJECTS = [
 
 export const EXPERIENCES = [
   {
-    logo: "/media/icons/brands/nvidia.svg",
-    title: "Research Scientist",
-    company: "NVIDIA Research",
-    companyUrl: "https://research.nvidia.com/",
-    date: "Dec 2021 – Present",
-    location: "Santa Clara, California",
+    logo: "/media/icons/brands/sap.svg",
+    title: "Lead of AI/ML Development & Research",
+    company: "SAP",
+    companyUrl: "https://www.sap.com/",
+    date: "Aug 2023 – Present",
+    location: "Berlin, Germany",
     description: [
-      "Leading research on foundation models for general-purpose autonomous agents",
-      "Spearheading the <a href='https://minedojo.org' target='_blank' rel='noopener'>MineDojo</a> project for open-ended agent learning",
-      "Mentoring graduate interns and collaborating with top universities"
+      "Leading development of multimodal AI systems for enterprise applications",
+      "Architecting neural search solutions for time series forecasting",
+      "Developing interpretable ML models integrating multiple data modalities"
+    ]
+  },
+  {
+    logo: "/media/icons/brands/hu.svg",
+    title: "Research Associate",
+    company: "Humboldt-Universität zu Berlin",
+    companyUrl: "https://www.hu-berlin.de/en",
+    date: "Nov 2022 – Jul 2023",
+    location: "Berlin, Germany",
+    description: [
+      "Researched human-AI collaboration patterns using multimodal data analysis",
+      "Developed ML models for analyzing human-AI interaction in workplace settings",
+      "Applied NLP and statistical methods to evaluate collaborative AI systems"
+    ]
+  },
+  {
+    logo: "/media/icons/brands/lmu.svg",
+    title: "AI Research Scientist",
+    company: "LMU Munich",
+    companyUrl: "https://www.lmu.de/en/",
+    date: "Oct 2020 – Oct 2022",
+    location: "Munich, Bavaria, Germany",
+    description: [
+      "Led research in multisensory intelligence and human-computer interaction",
+      "Developed neural architectures for multimodal data integration",
+      "Published papers on AI applications in spatial computing and robotics"
+    ]
+  },
+  {
+    logo: "/media/icons/brands/trip.png",
+    title: "Senior Data Engineer",
+    company: "Trip.com Group",
+    companyUrl: "https://www.trip.com/",
+    date: "Jun 2018 – Oct 2020",
+    location: "Shanghai, China",
+    description: [
+      "Designed multimodal recommendation systems combining text, image, and user behavior",
+      "Implemented large-scale ML pipelines for real-time data processing",
+      "Led development of computer vision solutions for travel content analysis"
+    ]
+  },
+  {
+    logo: "/media/icons/brands/etu.svg",
+    title: "Research Intern",
+    company: "St. Petersburg Electrotechnical University",
+    companyUrl: "https://etu.ru/en/",
+    date: "Mar 2018 – May 2018",
+    location: "St. Petersburg, Russia",
+    description: [
+      "Developed computer vision algorithms for robotic spatial awareness",
+      "Implemented sensor fusion solutions for robot navigation",
+      "Researched human-robot interaction in collaborative environments"
     ]
   }
 ]
