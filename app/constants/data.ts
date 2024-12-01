@@ -169,7 +169,7 @@ export const EXPERIENCES = [
     description: [
       "Led research in multisensory intelligence and human-computer interaction",
       "Developed neural architectures for multimodal data integration",
-      "Published papers on AI applications in spatial computing and robotics"
+      "Been awarded the German Chancellor Fellowship under the patronage of Angela Merkel"
     ]
   },
   {
